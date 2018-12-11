@@ -38,17 +38,17 @@ namespace Cede_Dotnet_CSharp7
             // ref variables
             int numberRef = 1;
 
-            Console.WriteLine(numberRef);
+            //Console.WriteLine(numberRef);
             ref int numberRef2 = ref SumNumber(ref numberRef);
-            Console.WriteLine(numberRef2);
+            //Console.WriteLine(numberRef2);
             numberRef2++;
-            Console.WriteLine(numberRef);
+            //Console.WriteLine(numberRef);
 
             double bigNumber = 10000000000000000000;
             double phoneNumber = 300_569_87_22;
             double decimalNumber = 1045.25_36_45;
 
-            Console.WriteLine(decimalNumber);
+            //Console.WriteLine(decimalNumber);
 
 
             object dateRandom = new DateTime(2018,01,01);
@@ -67,6 +67,57 @@ namespace Cede_Dotnet_CSharp7
                     Console.WriteLine("Es local");
                     break;
             }
+
+            var name = (first: "one", second: "two");
+
+            int intValue1 = 10;
+            int intValue2 = 5;
+            
+            //C# 7.0
+            var tupleInt = (Number1: intValue1, Number2: intValue2);
+
+            //C# 7.1
+            var tupleInt2 = (intValue1, intValue2);
+
+            (int valueInt, string valueString) GetInfo()
+            {
+                return (valueInt: 0, valueString: "");
+            }
+
+            var info = GetInfo();
+
+            DateTime? datetime = null;
+            
+            //null exception C# 7.0
+            //var dateTimeValue = datetime ??
+            //    throw new InvalidOperationException("variable null");
+
+            (bool, int) TryParse(string stringVal)
+            {                           if (int.TryParse(stringVal, out int intnumber1))                    {
+                        return (true, intnumber1);                    }
+
+                return (false, 0);
+            }
+
+            (bool, double) Div(double doubleVal, double doubleVal2)
+            {
+                try
+                {
+                  double resultDouble =  doubleVal / doubleVal2;
+
+                   return (true, resultDouble);
+                }
+                catch (Exception)
+                {
+                    return (false, 0);
+                }
+
+                return (false, 0);
+            }
+
+            var result = TryParse("qwqw");
+
+            Console.WriteLine($"{result.Item1} {result.Item2}");
 
             Console.ReadLine();
 
