@@ -4,16 +4,17 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{97D9BB0D-13D6-4CC4-9352-DBC990EF1183}</ProjectGuid>
-    <OutputType>Library</OutputType>
-    <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Cede_Dotnet_CSharp_Interfaces</RootNamespace>
-    <AssemblyName>Cede_Dotnet_CSharp_Interfaces</AssemblyName>
+    <ProjectGuid>{F610520D-5B11-4379-9107-E5F0CED621A1}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>Cede_Dotnet_CSharp_Adapter</RootNamespace>
+    <AssemblyName>Cede_Dotnet_CSharp_Adapter</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -23,6 +24,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -41,18 +43,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AbstractClasses\Car.cs" />
-    <Compile Include="AbstractClasses\SmallCar.cs" />
-    <Compile Include="AbstractClasses\vsInterface\CarInterface.cs" />
-    <Compile Include="AbstractClasses\vsInterface\ICar.cs" />
-    <Compile Include="Ejercicio\IComputador.cs" />
-    <Compile Include="Interfaces\Car.cs" />
-    <Compile Include="Interfaces\Auto.cs" />
-    <Compile Include="Interfaces\ICar.cs" />
-    <Compile Include="Interfaces\ElectricCar.cs" />
-    <Compile Include="Interfaces\IElectricCar.cs" />
-    <Compile Include="Interfaces\ISUV.cs" />
+    <Compile Include="ExternalFile2013Adapter.cs" />
+    <Compile Include="ExternalFileAdapter.cs" />
+    <Compile Include="ExternalFileFactory.cs" />
+    <Compile Include="ExternalFileServiceType.cs" />
+    <Compile Include="File.cs" />
+    <Compile Include="IExtenalFileAdapter.cs" />
+    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SharePoint.cs" />
+    <Compile Include="SharePoint2013.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

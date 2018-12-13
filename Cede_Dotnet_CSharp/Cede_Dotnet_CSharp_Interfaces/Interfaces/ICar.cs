@@ -2,6 +2,13 @@
 {
     public interface ICar
     {
-        string Mark { get; set; }         
+        string Mark { get; set; }
+
+        string Color { get; set; }
+
+        string Version { get; set; }
+
+        void Turn_On();
+
     }
 }
