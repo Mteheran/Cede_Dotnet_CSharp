@@ -10,6 +10,8 @@ namespace Cede_Dotnet_CSharp_Adapter
     {
         public static IExtenalFileAdapter GetFileAdapter(ExternalFileServiceType serviceType)
         {
+            List<int> list = new List<int>();
+
             switch (serviceType)
             {
                 case ExternalFileServiceType.SharePoint:
