@@ -45,6 +45,14 @@
     <Compile Include="AbstractClasses\SmallCar.cs" />
     <Compile Include="AbstractClasses\vsInterface\CarInterface.cs" />
     <Compile Include="AbstractClasses\vsInterface\ICar.cs" />
+    <Compile Include="DependecyInjection\Computer.cs" />
+    <Compile Include="DependecyInjection\HardDrive.cs" />
+    <Compile Include="DependecyInjection\IBoard.cs" />
+    <Compile Include="DependecyInjection\IDisk.cs" />
+    <Compile Include="DependecyInjection\IRam.cs" />
+    <Compile Include="DependecyInjection\MemoryRam.cs" />
+    <Compile Include="DependecyInjection\MotherBoard.cs" />
+    <Compile Include="DependecyInjection\User.cs" />
     <Compile Include="Ejercicio\IComputador.cs" />
     <Compile Include="Interfaces\Car.cs" />
     <Compile Include="Interfaces\Auto.cs" />
