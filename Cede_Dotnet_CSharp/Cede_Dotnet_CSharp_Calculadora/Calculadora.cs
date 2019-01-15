@@ -23,5 +23,20 @@ namespace Cede_Dotnet_CSharp_Calculadora
         {
             return numero1 + numero2;
         }
+
+        public double Doble(double numero)
+        {
+            return numero * 2;
+        }
+
+        public double Triple(double numero)
+        {
+            return numero * 3;
+        }
+
+        public double RaizCuadrada(double numero)
+        {
+            return Math.Sqrt(numero);
+        }
     }
 }

@@ -10,5 +10,8 @@ namespace Cede_Dotnet_CSharp_Calculadora
         double Restar(double numero1, double numero2);
         double Multiplicar(double numero1, double numero2);
         double Dividir(double numero1, double numero2);
+        double Doble(double numero);
+        double Triple(double numero);
+        double RaizCuadrada(double numero);
     }
 }

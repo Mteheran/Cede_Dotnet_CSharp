@@ -17,5 +17,10 @@ namespace Cede_Dotnet_CSharp_FileManager
         {
             return FileManager.GetTextFile().Length;
         }
+
+        public bool IsANumber()
+        {
+            return double.TryParse(FileManager.GetTextFile(), out var number);
+        }
     }
 }
