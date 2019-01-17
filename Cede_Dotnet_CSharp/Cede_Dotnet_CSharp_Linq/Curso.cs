@@ -6,12 +6,10 @@ using System.Threading.Tasks;
 
 namespace Cede_Dotnet_CSharp_Linq
 {
-    public class Estudiante
+    public class Curso
     {
-        public string Nombre { get; set; }
-        public string Apellido { get; set; }
         public string Codigo { get; set; }
-        public int Edad { get; set; }
-        public string Codigo_Curso { get; set; }
+        public string Nombre { get; set; }
+        public string Descripcion { get; set; }
     }
 }
