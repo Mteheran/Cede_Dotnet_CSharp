@@ -33,6 +33,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Cede_Dotnet_CSharp_FileMana
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cede_Dotnet_CSharp_XUnit", "Cede_Dotnet_CSharp_XUnit\Cede_Dotnet_CSharp_XUnit.csproj", "{D96D5693-6787-4734-97F4-13BFC1E3E7C2}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Linq", "Linq", "{806AA71F-2516-4114-9B4A-76666C7C9E45}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cede_Dotnet_CSharp_Linq", "Cede_Dotnet_CSharp_Linq\Cede_Dotnet_CSharp_Linq.csproj", "{2D1C1B4F-53D9-4A8A-B853-3A6F6B75ECCB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -91,6 +95,10 @@ Global
 		{D96D5693-6787-4734-97F4-13BFC1E3E7C2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D96D5693-6787-4734-97F4-13BFC1E3E7C2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D96D5693-6787-4734-97F4-13BFC1E3E7C2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2D1C1B4F-53D9-4A8A-B853-3A6F6B75ECCB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2D1C1B4F-53D9-4A8A-B853-3A6F6B75ECCB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2D1C1B4F-53D9-4A8A-B853-3A6F6B75ECCB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2D1C1B4F-53D9-4A8A-B853-3A6F6B75ECCB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -104,6 +112,7 @@ Global
 		{C27DDBB7-3A30-49CE-83BE-389A4F00ACA4} = {843E5C59-D58C-414C-9DC6-8FFA49FF7AC7}
 		{DE4FEDDF-553F-49C7-8175-C90552810E32} = {843E5C59-D58C-414C-9DC6-8FFA49FF7AC7}
 		{D96D5693-6787-4734-97F4-13BFC1E3E7C2} = {843E5C59-D58C-414C-9DC6-8FFA49FF7AC7}
+		{2D1C1B4F-53D9-4A8A-B853-3A6F6B75ECCB} = {806AA71F-2516-4114-9B4A-76666C7C9E45}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {826B84C8-7C7C-4EF3-95B0-CE28C567519C}

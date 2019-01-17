@@ -1,4 +1,5 @@
 ﻿using System;
+using AutoFixture;
 using Cede_Dotnet_CSharp_Calculadora;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
@@ -141,6 +142,23 @@ namespace Cede_Dotnet_CSharp_UnitTest_Demo
 
             //Assert(Afirmar)
             Assert.AreEqual(2, resultado);
+        }
+
+        [TestMethod]
+        public void Sumar_Autofixture()
+        {
+            //Arrange(Preparar)
+            Calculadora calculadora = new Calculadora();
+            Fixture autoFixture = new Fixture();
+            int number1 = autoFixture.Create<int>();
+            int number2 = autoFixture.Create<int>();
+
+            //Act(Actuar)
+            var suma = calculadora.Sumar(number1, number2);
+
+            //Assert(Afirmar)
+            Assert.IsNotNull(suma);
+            Assert.AreEqual(number1 + number2, suma);
         }
 
     }
