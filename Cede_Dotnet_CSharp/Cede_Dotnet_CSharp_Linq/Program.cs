@@ -194,9 +194,56 @@ namespace Cede_Dotnet_CSharp_Linq
 
             var estudiante19 = estudiantes.First(p => p.Edad == 19);
 
-            Console.WriteLine($"{estudiante19.Codigo} - {estudiante19.Nombre} {estudiante19.Apellido} - {estudiante19.Edad} ");            
+            //Console.WriteLine($"{estudiante19.Codigo} - {estudiante19.Nombre} {estudiante19.Apellido} - {estudiante19.Edad} ");            
 
-            Console.WriteLine($"{estudiantes.Min(p => p.Edad)} - {estudiantes.Max(p => p.Edad)} - {estudiantes.Sum(p => p.Edad)/estudiantes.Count} ");
+            //Console.WriteLine($"{estudiantes.Min(p => p.Edad)} - {estudiantes.Max(p => p.Edad)} - {estudiantes.Sum(p => p.Edad)/estudiantes.Count} ");
+
+            var estudiantesTexto = from e in estudiantes
+                                   where e.Edad > 18
+                                   orderby e.Edad
+                                   select $"{e.Nombre} {e.Apellido} - {e.Codigo_Curso}";
+
+            foreach (var item in estudiantesTexto)
+            {
+                //Console.WriteLine(item);
+            }
+
+            // Ejercicio
+            List<Book> lstBooks = new List<Book>();
+            var consultaLibro = from l in lstBooks                                where l.Title.ToLower().Contains("vida") && l.Year == "2005"                                orderby l.Year
+                                select l;
+
+
+            //Metodos de Enumerable
+            //Console.WriteLine($"{Enumerable.Min(estudiantes,p=> p.Edad) } - {Enumerable.Max(estudiantes, p => p.Edad)} - {(double)(double.Parse(Enumerable.Sum(estudiantes, p => p.Edad).ToString()) / double.Parse(estudiantes.Count.ToString()))} ");
+
+            var estudiantesRandom = Enumerable.Repeat(new Estudiante() { Nombre = "Mario" }, 10);
+
+            foreach (var item in estudiantesRandom)
+            {
+                //Console.WriteLine($"{item.Codigo} - {item.Nombre} {item.Apellido} - {item.Edad} ");
+            }
+
+            var estudianteContact = Enumerable.Concat(estudiantes, estudiantesRandom);
+
+            foreach (var item in estudianteContact)
+            {
+                //Console.WriteLine($"{item.Codigo} - {item.Nombre} {item.Apellido} - {item.Edad} ");
+            }
+
+            Console.WriteLine($"{Enumerable.Min(estudiantes,p=> p.Edad) } - {Enumerable.Max(estudiantes, p => p.Edad)} - {Enumerable.Average(estudiantes, p => p.Edad).ToString("P")} ");
+
+
+            foreach (var item in Enumerable.Except(estudiantes, estudiantesDiferentesFiltros))
+            {
+                //esto no se debe hacer
+                if (estudiantesDiferentesFiltros.Contains(item))
+                {
+                    continue;
+                }
+
+                //Console.WriteLine($"{item.Codigo} - {item.Nombre} {item.Apellido} - {item.Edad} ");
+            }
 
             Console.ReadKey();    
             
